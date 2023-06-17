@@ -1,28 +1,27 @@
 body {
   font-family: 'Titillium Web';
   margin: 0;
-  padding: 0; /* Add this line to remove the default padding */
+  padding: 0;
   overflow: hidden;
+  background-color: black; /* Add a black background color */
 }
 
 .triggers {
+  position: fixed; /* Change the position to fixed */
   bottom: 20px;
-  left: 50%;
-  position: absolute;
+  left: 0;
+  right: 0;
   text-align: center;
-  width: 100%;
-  transform: translateX(-50%);
   z-index: 10;
   color: #fff;
-  margin-top: 20px; /* Add this line to create space at the top */
 }
 
 span {
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  margin: 0 10px; /* Adjust the margin for better spacing on mobile */
-  padding: 4px 8px; /* Adjust the padding for better spacing on mobile */
+  margin: 0 10px;
+  padding: 4px 8px;
   transition: all 0.5s;
 }
 
@@ -34,15 +33,20 @@ span[data-disabled="true"] {
 /* Media Query for smaller screens */
 @media screen and (max-width: 480px) {
   .triggers {
-    position: static;
+    position: fixed;
+    bottom: 0; /* Align the buttons to the bottom */
+    left: 0;
+    right: 0;
     text-align: center;
-    margin-top: 20px;
-    bottom: auto; /* Remove the bottom positioning */
+    z-index: 10;
+    color: #fff;
+    background-color: black; /* Add a black background color */
+    padding: 10px; /* Add some padding for better spacing */
   }
 
   span {
     font-size: 12px;
-    padding: 6px 12px; /* Adjust the padding for better spacing on mobile */
-    margin: 6px; /* Adjust the margin for better spacing on mobile */
+    padding: 6px 12px;
+    margin: 6px;
   }
 }
