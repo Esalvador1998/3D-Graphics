@@ -1,6 +1,7 @@
 body {
   font-family: 'Titillium Web';
   margin: 0;
+  padding: 0; /* Add this line to remove the default padding */
   overflow: hidden;
 }
 
@@ -13,14 +14,15 @@ body {
   transform: translateX(-50%);
   z-index: 10;
   color: #fff;
+  margin-top: 20px; /* Add this line to create space at the top */
 }
 
 span {
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  margin: 0 20px;
-  padding: 2px 4px;
+  margin: 0 10px; /* Adjust the margin for better spacing on mobile */
+  padding: 4px 8px; /* Adjust the padding for better spacing on mobile */
   transition: all 0.5s;
 }
 
@@ -35,11 +37,12 @@ span[data-disabled="true"] {
     position: static;
     text-align: center;
     margin-top: 20px;
+    bottom: auto; /* Remove the bottom positioning */
   }
 
   span {
     font-size: 12px;
-    padding: 8px 16px;
-    margin: 10px;
+    padding: 6px 12px; /* Adjust the padding for better spacing on mobile */
+    margin: 6px; /* Adjust the margin for better spacing on mobile */
   }
 }
