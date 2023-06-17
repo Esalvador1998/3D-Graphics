@@ -3,45 +3,41 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: black; /* Add a black background color */
+  background-color: black;
 }
 
 .triggers {
-  position: fixed; /* Change the position to fixed */
-  bottom: 20px;
+  position: fixed;
+  bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
   z-index: 10;
   color: #fff;
+  background-color: black;
+  padding: 10px;
 }
 
 span {
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  margin: 0 10px;
-  padding: 4px 8px;
+  margin: 6px;
+  padding: 6px 12px;
   transition: all 0.5s;
 }
 
-span[data-disabled="true"] {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-/* Media Query for smaller screens */
 @media screen and (max-width: 480px) {
   .triggers {
     position: fixed;
-    bottom: 0; /* Align the buttons to the bottom */
+    bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
     z-index: 10;
     color: #fff;
-    background-color: black; /* Add a black background color */
-    padding: 10px; /* Add some padding for better spacing */
+    background-color: black;
+    padding: 10px;
   }
 
   span {
@@ -49,4 +45,12 @@ span[data-disabled="true"] {
     padding: 6px 12px;
     margin: 6px;
   }
+}
+
+/* Center the main graphic */
+canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
